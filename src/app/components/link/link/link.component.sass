@@ -3,6 +3,15 @@ $padding-links:2px
 $border-links:2px solid rgb(12,14,90)
 $font-size-links:19px
 
+$layout-breakpoint-medium:800px
+$font-size-links-medium:17px
+
+$layout-breakpoint-small:600px
+$font-size-links-small:15px
+
+$layout-breakpoint-big-small:390px
+$font-size-links-big-small:13px
+
 a
   color: $color-links
   text-decoration: none
@@ -12,3 +21,16 @@ a
   &:hover
     padding-bottom: $padding-links
     border-bottom: $border-links
+
+
+@media (width < $layout-breakpoint-medium)
+  a
+    font-size: $font-size-links-medium
+
+@media (width < $layout-breakpoint-small)
+  a
+    font-size: $font-size-links-small
+
+@media (width < $layout-breakpoint-big-small)
+  a
+    font-size: $font-size-links-big-small

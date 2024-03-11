@@ -3,11 +3,11 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.sass'
+  styleUrls: ['./header.component.sass','./header.responsive.component.sass']
 })
 export class HeaderComponent {
   title:string='User System';
-  
+
   name_links={
     create_user:'Criar Usuário',
     tutorial:'Tutorial',

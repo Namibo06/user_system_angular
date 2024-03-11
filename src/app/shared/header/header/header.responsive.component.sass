@@ -1,0 +1,42 @@
+$layout-breakpoint-medium:800px
+$layout-breakpoint-small:600px
+$layout-breakpoint-big-small:390px
+$layout-breakpoint-big-x-small:320px
+
+@media (width < $layout-breakpoint-medium)
+  div.header-container div.header-elements
+    padding: 0 10px
+
+  div.links
+    li
+      margin-right: 15px
+
+@media (width < $layout-breakpoint-small)
+  div.header-container div.header-elements
+    padding: 0 6px
+
+  div.links
+    li
+      margin-right: 10px
+
+@media (width < $layout-breakpoint-big-small)
+  div.header-container div.header-elements
+    padding: 0 4px
+
+  div.links
+    li
+      margin-right: 5px
+
+@media (width < $layout-breakpoint-big-x-small)
+  div.header-container div.header-elements
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+  div.header-elements div.links
+    ul
+      padding: 0
+
+    li
+      margin-right: 20px
+
