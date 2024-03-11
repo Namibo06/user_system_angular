@@ -6,9 +6,27 @@
 
     <div class="links">
       <ul>
-        <li><a href="">Criar Usuário</a></li>
-        <li><a href="">Tutorial</a></li>
-        <li><a href="">Sair</a></li>
+        <li>
+          <app-link
+          [redirect_links]="redirect_links.create_user"
+          [name_links]="name_links.create_user"
+          ></app-link>
+        </li>
+
+        <li>
+          <app-link
+          [redirect_links]="redirect_links.tutorial"
+          [name_links]="name_links.tutorial"
+          >
+          </app-link>
+        </li>
+
+        <li>
+          <app-link
+            [redirect_links]="redirect_links.sair"
+            [name_links]="name_links.sair"
+          ></app-link>
+        </li>
       </ul>
     </div><!--links-->
   </div><!--header-elements-->

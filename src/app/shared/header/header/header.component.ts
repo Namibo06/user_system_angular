@@ -7,11 +7,16 @@ import { Component, Input } from '@angular/core';
 })
 export class HeaderComponent {
   title:string='User System';
-  name_links:Object={
-
+  
+  name_links={
+    create_user:'Criar Usuário',
+    tutorial:'Tutorial',
+    sair:'Sair'
   };
 
-  redirect_links:Object={
-    
+  redirect_links={
+    create_user: 'criar_usuario',
+    tutorial: 'tutorial',
+    sair:'Sair'
   }
 }
