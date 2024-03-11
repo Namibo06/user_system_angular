@@ -1,0 +1,75 @@
+$color-links:#444
+$color-links-hover:#8888
+$font-size-links:17px
+$font-size-title:24px
+$font-weight-title:300
+$color-networks:rgb(12,14,90)
+
+%footer-column
+  display: flex
+  flex-direction: column
+
+%footer-h3
+  font-size: $font-size-title
+  font-weight: $font-weight-title
+
+%footer-ul
+  position: relative
+  top: -20px
+  right: 40px
+
+%footer-li
+  list-style-type: none
+  margin-bottom: 15px
+
+%footer-a
+  text-decoration: none
+  font-size: $font-size-links
+  color:$color-networks
+  transition: 0.2s
+  transition-timing-function: ease-in
+  &:hover
+    border-bottom: 2px solid rgb(12, 14, 90)
+
+div.enterprise-name
+  padding-left: 90px
+  h2
+    @extend %footer-h3
+
+div.row
+  display: flex
+  flex-direction: row
+  justify-content: space-evenly
+  padding-top: 10px
+
+  div.links
+    @extend %footer-column
+    h3
+      @extend %footer-h3
+    ul
+      @extend %footer-ul
+      li
+        @extend %footer-li
+
+  div.networks
+    @extend %footer-column
+    h3
+      @extend %footer-h3
+    ul
+      @extend %footer-ul
+      li
+        @extend %footer-li
+        display: flex
+        flex-direction: row
+        align-items: center
+        fa-icon
+          font-size: 20px
+          margin-right: 5px
+        a
+          @extend %footer-a
+
+div.copyright
+  p
+    text-align: center
+    font-size: $font-size-links
+    color: #777

@@ -10,6 +10,7 @@ import { FooterComponent } from './shared/footer/footer/footer.component';
 import { TitleComponent } from './components/title/title/title.component';
 import { HeaderModule } from './shared/header/header.module';
 import { LinkComponent } from './components/link/link/link.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LinkComponent } from './components/link/link/link.component';
     BrowserModule,
     AppRoutingModule,
     IndexModule,
-    HeaderModule
+    HeaderModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

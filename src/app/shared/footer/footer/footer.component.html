@@ -1,1 +1,57 @@
-<p>footer works!</p>
+<div class="footer-container">
+  <div class="enterprise-name">
+    <h2>User System</h2>
+  </div><!--enterprise-name-->
+
+  <div class="row">
+    <div class="links">
+      <h3>Links Rápidos</h3>
+      <ul>
+        <li>
+          <app-link
+            [name_links]="name_links.cadastro"
+            [redirect_links]="redirect_links.cadastro"
+          ></app-link>
+        </li>
+
+        <li>
+          <app-link
+            [name_links]="name_links.login"
+            [redirect_links]="redirect_links.login"
+          ></app-link>
+        </li>
+
+        <li>
+          <app-link
+            [name_links]="name_links.usuarios"
+            [redirect_links]="redirect_links.usuarios"
+          ></app-link>
+        </li>
+      </ul>
+    </div><!--links-->
+
+    <div class="networks">
+      <h3>Redes Sociais</h3>
+      <ul>
+        <li>
+          <fa-icon [icon]="instagram"></fa-icon>
+          <a href="">Instagram</a>
+        </li>
+
+        <li>
+          <fa-icon [icon]="facebook"></fa-icon>
+          <a href="">Facebook</a>
+        </li>
+
+        <li>
+          <fa-icon [icon]="twitter"></fa-icon>
+          <a href="">Twitter</a>
+        </li>
+      </ul>
+    </div><!--networks-->
+  </div><!--row-->
+
+  <div class="copyright">
+    <p>© User System all rights reserveds 2024 - {{date}}</p>
+  </div><!--copyright-->
+</div><!--footer-container-->
