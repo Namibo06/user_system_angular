@@ -1,0 +1,61 @@
+%form-button
+  padding: 8px 10px
+  border: 0
+  border-radius: 5px
+  color: #fff
+  font-weight: bolder
+  font-size: 14px
+  cursor: pointer
+
+@mixin theme($theme : '')
+  background-color: $theme
+
+main
+  div.users
+    padding: 40px 0 80px 0
+    div.title
+      h2
+        font-size: 30px
+        font-weight: 300
+        color: #444
+        text-align: center
+        padding-bottom: 20px
+    div.user-box
+      display: flex
+      flex-direction: column
+      width: 600px
+      max-width: 95%
+      position: relative
+      left: 50%
+      transform: translateX(-50%)
+      div.user-single
+        display: flex
+        flex-direction: row
+        align-items: center
+        padding: 20px
+        border-bottom: 2px solid #444
+        div.name
+          width: 50%
+          p
+            font-size: 17px
+        div.actions
+          width: 50%
+          display: flex
+          flex-direction: row
+          justify-content: space-evenly
+          form
+            &:nth-child(1)
+              button
+                @include theme($theme: rgba(0, 200, 200, 0.918))
+                @extend %form-button
+                &:hover
+                  @include theme($theme: rgba(0, 200, 200, 0.705))
+            &:nth-child(2)
+              button
+                @include theme($theme: #ff0000)
+                @extend %form-button
+                &:hover
+                  @include theme($theme: #c41919)
+
+
+
