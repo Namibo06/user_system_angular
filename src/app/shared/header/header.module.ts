@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { TitleModule } from '../../components/title/title.module';
 import { LinkModule } from '../../components/link/link.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -12,7 +13,8 @@ import { LinkModule } from '../../components/link/link.module';
   imports: [
     CommonModule,
     TitleModule,
-    LinkModule
+    LinkModule,
+    RouterModule
   ]
 })
 export class HeaderModule { }

@@ -15,7 +15,7 @@ export class HeaderComponent {
   };
 
   redirect_links={
-    create_user: 'criar_usuario',
+    create_user: 'criar-usuario',
     tutorial: 'tutorial',
     sair:'Sair'
   }

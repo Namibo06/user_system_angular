@@ -11,10 +11,16 @@ import { TitleComponent } from './components/title/title/title.component';
 import { HeaderModule } from './shared/header/header.module';
 import { LinkComponent } from './components/link/link/link.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CreateUserComponent } from './pages/create-user/create-user/create-user.component';
+import { ViewUserComponent } from './pages/view-user/view-user/view-user.component';
+import { FooterModule } from './shared/footer/footer.module';
+import { CreateUserModule } from './pages/create-user/create-user.module';
+import { ViewUserModule } from './pages/view-user/view-user.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+
 
   ],
   imports: [
@@ -22,7 +28,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,
     IndexModule,
     HeaderModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HeaderModule,
+    FooterModule,
+    CreateUserModule,
+    ViewUserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
