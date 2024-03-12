@@ -1,0 +1,81 @@
+$layout-breakpoint-small:600px
+$layout-breakpoint-big-small:390px
+$layout-breakpoint-big-x-small:320px
+
+$color-links:#444
+$color-links-hover:#8888
+$font-size-links:17px
+$font-size-title:24px
+$font-weight-title:300
+$color-networks:rgb(12,14,90)
+
+
+@media (width < $layout-breakpoint-small)
+  div.enterprise-name
+    padding-left: 0px
+    h2
+      text-align: center
+  div.row
+    padding-top: 0px
+    div.links
+      h3
+        font-size: 20px
+    div.networks
+      h3
+        font-size: 20px
+      ul
+        li
+          fa-icon
+            font-size: 18px
+          a
+            font-size: 16px
+  div.copyright
+    p
+      font-size: 14px
+
+@media (width < $layout-breakpoint-big-small)
+  div.enterprise-name
+    h2
+      font-size: 19px
+  div.row
+    div.links
+      h3
+        font-size: 18px
+    div.networks
+      h3
+        font-size: 18px
+      ul
+        li
+          fa-icon
+            font-size: 16px
+          a
+            font-size: 14px
+  div.copyright
+    p
+      font-size: 12px
+
+@media (width < $layout-breakpoint-big-x-small)
+   div.row
+    flex-direction: column
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+    width: 250px
+    text-align: center
+    div.links
+      ul
+        width: 100px
+        position: relative
+        left: 50%
+        transform: translateX(-50%)
+        li
+          text-align: left
+    div.networks
+      ul
+        width: 100px
+        position: relative
+        left: 50%
+        transform: translateX(-50%)
+        li
+          text-align: left
+
