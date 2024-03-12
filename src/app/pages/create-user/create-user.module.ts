@@ -4,7 +4,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { RouterModule } from '@angular/router';
 import { HeaderModule } from '../../shared/header/header.module';
 import { FooterModule } from '../../shared/footer/footer.module';
-
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -14,7 +14,8 @@ import { FooterModule } from '../../shared/footer/footer.module';
     CommonModule,
     RouterModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    FormsModule
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
