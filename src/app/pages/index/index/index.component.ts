@@ -8,6 +8,8 @@ import { UserService } from '../../../service/user.service';
 })
 export class IndexComponent {
   users:any=[];
+  modal_delete_user:boolean=false;
+  option_delete_user:string='';
 
   constructor(
     private service:UserService
@@ -18,12 +20,24 @@ export class IndexComponent {
   get_all_users(){
     this.service.getAllUsers().subscribe({
       next:(res)=>{
-        //console.log(res);
+        console.log(res);
         this.users=res;
       },
       error:(err)=>{
         console.log(err);
       }
     });
+  }
+
+  open_modal_delete_user(){
+    this.modal_delete_user=true;
+  }
+
+  close_modal_delete_user(){
+    this.modal_delete_user=false;
+  }
+
+  delete_user(){
+
   }
 }

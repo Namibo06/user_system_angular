@@ -29,4 +29,8 @@ export class UserService {
 
     return this.http.post<create_user>(this.urlUser,body);
   }
+
+  deleteUser(){
+    
+  }
 }
