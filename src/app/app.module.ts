@@ -16,6 +16,9 @@ import { ViewUserComponent } from './pages/view-user/view-user/view-user.compone
 import { FooterModule } from './shared/footer/footer.module';
 import { CreateUserModule } from './pages/create-user/create-user.module';
 import { ViewUserModule } from './pages/view-user/view-user.module';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { ViewUserModule } from './pages/view-user/view-user.module';
     HeaderModule,
     FooterModule,
     CreateUserModule,
-    ViewUserModule
+    ViewUserModule,
+    HttpClientModule,
+    RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
