@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from '../../../service/user.service';
 
 @Component({
   selector: 'app-index',
@@ -6,5 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./index.component.sass','./index.responsive.component.sass']
 })
 export class IndexComponent {
+  users:any=[];
 
+  constructor(
+    private service:UserService
+  ){
+    this.get_all_users();
+  }
+
+  get_all_users(){
+    this.service.getAllUsers().subscribe({
+      next:(res)=>{
+        //console.log(res);
+        this.users=res;
+      },
+      error:(err)=>{
+        console.log(err);
+      }
+    });
+  }
 }

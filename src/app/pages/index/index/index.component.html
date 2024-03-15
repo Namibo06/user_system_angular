@@ -9,10 +9,10 @@
         <h2>Usuários</h2>
       </div><!--title-->
 
-      <div class="user-box">
+      <div class="user-box" *ngFor="let item of this.users">
         <div class="user-single">
           <div class="name">
-            <a [routerLink]="['/usuario/1']">Nome</a>
+            <a [routerLink]="['/usuario/'+item.id]">{{item.first_name}}</a>
           </div><!--name-->
 
           <div class="actions">
@@ -26,37 +26,6 @@
           </div><!--actions-->
         </div><!--user-single-->
 
-        <div class="user-single">
-          <div class="name">
-            <a [routerLink]="['/usuario/2']">Nome</a>
-          </div><!--name-->
-
-          <div class="actions">
-            <form action="" method="post">
-              <button type="submit">Atualizar</button>
-            </form>
-
-            <form action="" method="post">
-              <button type="submit">Deletar</button>
-            </form>
-          </div><!--actions-->
-        </div><!--user-single-->
-
-        <div class="user-single">
-          <div class="name">
-            <a [routerLink]="['/usuario/3']">Nome</a>
-          </div><!--name-->
-
-          <div class="actions">
-            <form action="" method="post">
-              <button type="submit">Atualizar</button>
-            </form>
-
-            <form action="" method="post">
-              <button type="submit">Deletar</button>
-            </form>
-          </div><!--actions-->
-        </div><!--user-single-->
       </div><!--user-box-->
     </div><!--users-->
   </main>
