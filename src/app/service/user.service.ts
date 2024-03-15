@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { create_user } from '../models/create_user';
+import { get_all_user } from '../models/get_all_user';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,10 @@ export class UserService {
   constructor(
     private http:HttpClient
   ) { }
+
+  getAllUsers():Observable<get_all_user>{
+    return this.http.get<get_all_user>(this.urlUser);
+  }
 
   createUser(first_name:string,last_name:string,email:string,nivel_user:string,password:string):Observable<create_user>{
     const body={
