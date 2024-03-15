@@ -14,7 +14,7 @@
         ]
       },
       {
-        "source": "/(.*)",
+        "source": "/user-system-angular.vercel.app/(.*)",
         "headers": [
           { "key": "Access-Control-Allow-Origin", "value": "*" }
         ]
