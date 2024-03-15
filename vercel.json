@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+      {
+          "src": "../../api-java",
+          "use": "@vercel/java"
+      }
+  ],
+  "headers": [
+      {
+        "source": "/(.*)",
+        "headers": [
+          { "key": "Access-Control-Allow-Origin", "value": "*" }
+        ]
+      },
+      {
+        "source": "/(.*)",
+        "headers": [
+          { "key": "Access-Control-Allow-Origin", "value": "*" }
+        ]
+      }
+  ]
+}
