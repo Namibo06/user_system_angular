@@ -3,20 +3,25 @@ $layout-breakpoint-small:600px
 $layout-breakpoint-big-small:420px
 $layout-breakpoint-big-x-small:320px
 
+@media (width < $layout-breakpoint-small)
+  div.user-single
+    padding: 10px !important
+    div.name
+      p
+        font-size: 16px !important
+
 @media (width < $layout-breakpoint-big-small)
   div.user-single
     flex-direction: column !important
-    padding: 10px !important
+    padding: 10px 0 !important
     div.name
       width: 100%
       text-align: center
-      padding-bottom: 20px
-      a
-        font-size: 17px
+      padding-bottom: 10px
+      p
+        font-size: 14px !important
 
     div.actions
       width: 100%
-      form
-        &:nth-child(1)
-          button
-            margin-right: 20px
+      a
+        margin-right: 20px !important

@@ -21,21 +21,6 @@
         </div><!--user-single-->
 
       </div><!--user-box-->
-
-      <div class="modal_delete_user" *ngIf="modal_delete_user">
-        <div class="modal_wraper_delete_user">
-          <div class="content">
-            <p>Deseja excluir este usuário permanentemente?</p>
-          </div><!--content-->
-
-          <div class="options">
-            <form action="" method="post">
-              <button type="submit" (click)="delete_user()">Excluir</button>
-              <button type="button" (click)="close_modal_delete_user()">Cancelar</button>
-            </form>
-          </div><!--options-->
-        </div><!--modal_wraper_delete_user-->
-      </div><!--modal_delete_user-->
     </div><!--users-->
   </main>
 
