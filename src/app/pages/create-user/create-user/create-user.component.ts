@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from '../../../service/user.service';
 
 @Component({
   selector: 'app-create-user',
@@ -20,7 +21,9 @@ export class CreateUserComponent {
   callbackSucess:boolean=false;
   messageSucess:string='';
 
-  constructor(){
+  constructor(
+    private service:UserService
+  ){
 
   }
 
@@ -34,6 +37,13 @@ export class CreateUserComponent {
       }, 5000);
     }
 
-    
+    this.service.createUser(this.first_name,this.last_name,this.email,this.nivel_user,this.password).subscribe({
+      next:(res)=>{
+        console.log(res);
+      },
+      error:(err)=>{
+        console.log(err);
+      }
+    });
   }
 }
