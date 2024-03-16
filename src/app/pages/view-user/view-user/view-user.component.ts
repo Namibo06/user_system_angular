@@ -36,4 +36,20 @@ export class ViewUserComponent {
       }
     });
   }
+
+  open_modal_delete_user(){
+    
+  }
+
+  delete_user(){
+    this.service.deleteUser(this.id).subscribe({
+      next:(res)=>{
+        console.log(res);
+
+      },
+      error:(err)=>{
+        console.log(err);
+      }
+    });
+  }
 }

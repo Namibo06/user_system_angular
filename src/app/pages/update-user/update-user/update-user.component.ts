@@ -46,7 +46,7 @@ export class UpdateUserComponent {
   }
 
   update_user(){
-    this.service.updateUser(this.id,this.first_name,this.last_name,this.email,this.nivel_user,this.password).subscribe({
+    this.service.updateUser(this.id,this.first_name,this.last_name,this.email,this.nivel_user).subscribe({
       next:(res)=>{
         console.log(res);
 
