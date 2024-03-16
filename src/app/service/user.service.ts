@@ -35,7 +35,19 @@ export class UserService {
     return this.http.post<create_user>(this.urlUser,body);
   }
 
-  deleteUser(){
+  updateUser(id:string,first_name:string,last_name:string,email:string,nivel_user:string,password:string):Observable<create_user>{
+    const body={
+      'first_name':first_name,
+      'last_name':last_name,
+      'email':email,
+      'nivel_user':nivel_user,
 
+    };
+
+    return this.http.put<create_user>(this.urlUser+"/"+id,body);
+  }
+
+  deleteUser(id:string){
+    return this.http.delete(this.urlUser+"/"+id);
   }
 }

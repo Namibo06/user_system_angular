@@ -1,1 +1,55 @@
-<p>update-user works!</p>
+<div class="update-user-container">
+  <header>
+    <app-header></app-header>
+  </header>
+
+  <main>
+    <div class="update">
+      <div class="callback">
+        <p class="error" *ngIf="callbackError">{{messageError}}</p>
+        <p class="sucess" *ngIf="callbackSucess">{{messageSucess}}</p>
+      </div><!--callback-->
+
+      <div class="title">
+        <h2>Criar Usuário</h2>
+      </div><!--title-->
+
+      <form action="" method="post" (ngSubmit)="update_user()">
+        <div class="camp">
+          <label>Nome</label>
+          <input type="text" name="first_name" [(ngModel)]="first_name">
+        </div><!--camp-->
+
+        <div class="camp">
+          <label>Sobrenome</label>
+          <input type="text" name="last_name" [(ngModel)]="last_name">
+        </div><!--camp-->
+
+        <div class="camp">
+          <label>Email</label>
+          <input type="email" name="email" [(ngModel)]="email">
+        </div><!--camp-->
+
+        <div class="camp">
+          <label>Nível de Usuário</label>
+          <select name="nivel_user" [(ngModel)]="nivel_user">
+            <option value="">Escolha uma opção</option>
+            <option value="adm">Administrador</option>
+            <option value="comum">Comum</option>
+          </select>
+        </div><!--camp-->
+
+        <div class="camp">
+          <label>Senha</label>
+          <input type="password" name="password" [(ngModel)]="password">
+        </div><!--camp-->
+
+        <button type="submit">Atualizar</button>
+      </form>
+    </div><!--update-->
+  </main>
+
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div><!--update-user-container-->

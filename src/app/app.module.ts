@@ -20,12 +20,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { UpdateUserComponent } from './pages/update-user/update-user/update-user.component';
+import { UpdateUserModule } from './pages/update-user/update-user.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UpdateUserComponent,
-
 
   ],
   imports: [
@@ -40,7 +39,8 @@ import { UpdateUserComponent } from './pages/update-user/update-user/update-user
     ViewUserModule,
     HttpClientModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    UpdateUserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
