@@ -19,10 +19,12 @@ import { ViewUserModule } from './pages/view-user/view-user.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { UpdateUserComponent } from './pages/update-user/update-user/update-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    UpdateUserComponent,
 
 
   ],

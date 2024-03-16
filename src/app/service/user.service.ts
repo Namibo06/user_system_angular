@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { create_user } from '../models/create_user';
 import { get_all_user } from '../models/get_all_user';
+import { get_one_user } from '../models/get_one_user';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,10 @@ export class UserService {
     return this.http.get<get_all_user>(this.urlUser);
   }
 
+  getOneUser(id:string):Observable<get_one_user>{
+    return this.http.get<get_one_user>(this.urlUser+"/"+id);
+  }
+
   createUser(first_name:string,last_name:string,email:string,nivel_user:string,password:string):Observable<create_user>{
     const body={
       'first_name':first_name,
@@ -31,6 +36,6 @@ export class UserService {
   }
 
   deleteUser(){
-    
+
   }
 }

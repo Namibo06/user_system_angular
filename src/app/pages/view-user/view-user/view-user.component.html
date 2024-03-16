@@ -1,1 +1,41 @@
-<p>view-user works!</p>
+<div class="view-user-container">
+  <header>
+    <app-header></app-header>
+  </header>
+
+  <main>
+    <div class="data-user">
+      <div class="box">
+        <p>Nome:</p>
+        <p>{{first_name}}</p>
+      </div><!--box-->
+
+      <div class="box">
+        <p>Sobrenome:</p>
+        <p>{{last_name}}</p>
+      </div><!--box-->
+
+      <div class="box">
+        <p>Email:</p>
+        <p>{{email}}</p>
+      </div><!--box-->
+
+      <div class="box">
+        <p>Nível de Usuário:</p>
+        <p>{{nivel_user}}</p>
+      </div><!--box-->
+
+      <div class="actions">
+        <a [routerLink]="['/update-user'+id]">Atualizar</a>
+
+        <form action="" method="post">
+          <button type="button">Deletar</button>
+        </form>
+      </div><!--actions-->
+    </div><!--data-user-->
+  </main>
+
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+</div><!--view-user-container-->
